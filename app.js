@@ -15,6 +15,7 @@ db.once('open', function() {
  console.log("succesfully connected to db !");
 });
 
+var indexRouter = require('./routes/index');
 var userRouter = require('./routes/user');
 var articleRouter = require('./routes/article');
 
@@ -31,6 +32,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/', indexRouter);
 app.use('/users', userRouter);
 app.use('/articles', articleRouter);
 
