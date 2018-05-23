@@ -5,8 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors')
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/mongoose-blog');
-// mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds113200.mlab.com:13200/mongoose-crud');
+mongoose.connect('mongodb://admin:asd@ds151963.mlab.com:51963/hacktiv8-blogs');
+
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
